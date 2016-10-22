@@ -1,0 +1,24 @@
+﻿<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+ </head>
+
+<body>
+    <textarea rows="20" cols="100" id="code"></textarea>
+    <br/>
+    <input type="button" id="eval" value="eval" onclick=run() style="width:720px"/>
+    <br/>
+    <textarea rows="10" cols="100" id="result"></textarea>
+</body>
+
+
+</html>
+<script src="scheme.js"></script>
+<script>
+function run() {
+    var s = scheme(document.getElementById("code").value);
+    document.getElementById("result").value  = s;
+}
+</script>
